@@ -72,9 +72,12 @@ public class CountAndSay {
     // another way
     public String countAndSay2(int n) {
         if( n <= 0) return "-1";
+        if(n == 1)
+            return "1";
+
         String result = "1";
 
-        for(int i = 0; i < n; i++){
+        for(int i = 1; i < n; i++){
             result = build(result);
         }
         return result;
